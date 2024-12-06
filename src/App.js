@@ -35,22 +35,23 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {/*Header */}
-        <h1>METEOK</h1>
 
+      <h1 className='meteok'>METEOK</h1>
+      
+      <header className="App-header">
+        
+        
         {/*search */}
-        <input type='text' placeholder='Rechercher...'
+        <input className='recherche' type='text' placeholder='Rechercher...'
         
         onChange={(e) => setSearch(e.target.value)}
         />
 
-        <button onClick={searchPressed}>Recherche</button>
+        <button className='btnR' onClick={searchPressed}>Recherche</button>
+      </header>
 
-        
-        
-
-      {typeof weather.main !== "undefined" ? (
+      <div className='resultats'>
+    {typeof weather.main !== "undefined" ? (
 
         <div>
           
@@ -70,12 +71,7 @@ function App() {
         <p>{error}</p>
       )
      }
-
-        
-
-        
-        
-      </header>
+     </div>
     </div>
   );
 }

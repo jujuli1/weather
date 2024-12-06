@@ -1,18 +1,45 @@
-.App {
-  text-align: center;
+
+
+body{
+  background-image: url('../public/img/ciel.jpg');
+}
+
+.meteok{
+  margin-left: 3%;
+  padding-top: 1%;
+  font-size: 65px;
+
+}
+
+.resultats{
+  font-size: 3vh;
+}
+.recherche{
+  height: 35px;
+  width: 299px;
+  font-size: 32px;
+  margin-top: 10px;
+  border-radius: 7px;
+}
+
+.btnR{
+  width: 100px;
+  height: 73px;
+  border-radius: 40px;
+  margin-top: 9px;
 }
 
 
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-bottom: -100px;
+  min-height: 50vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  gap: 2vh;
 }
 
 
