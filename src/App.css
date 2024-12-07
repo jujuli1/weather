@@ -2,31 +2,42 @@
 
 body{
   background-image: url('../public/img/ciel.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .meteok{
   margin-left: 3%;
   padding-top: 1%;
   font-size: 65px;
+  color: rgb(230, 230, 15);
 
 }
 
 .resultats{
   font-size: 3vh;
+  margin-left: 88vh;
 }
 .recherche{
   height: 35px;
   width: 299px;
   font-size: 32px;
-  margin-top: 10px;
   border-radius: 7px;
+  background-color: transparent; /* Fond transparent */
+  
+
+  
 }
 
 .btnR{
   width: 100px;
   height: 73px;
   border-radius: 40px;
-  margin-top: 9px;
+  margin-top: -5px;
+  background-color: rgb(253, 253, 249);
+  border: none;
+  border: 1px solid #d3dcf0;
+  font-family: Jazz LET, fantasy  sans-serif;
 }
 
 
@@ -34,12 +45,21 @@ body{
 .App-header {
   margin-bottom: -100px;
   min-height: 50vh;
+  
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   gap: 2vh;
+}
+
+#three-container{
+  
+  width: 65%;
+  height: 100vh;
+  margin-top: -30%;
+  margin-left: 31%;
 }
 
 
