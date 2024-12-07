@@ -63,7 +63,7 @@ function App() {
     // Variables pour le mouvement circulaire
     let angle = 0; // Angle initial en radians
     const radius = 2; // Rayon du cercle
-    const speed = 0.002; // Vitesse de rotation (radians par frame)
+    const speed = 0.001; // Vitesse de rotation (radians par frame)
 
     // Animation
     function animateRotate() {
@@ -93,11 +93,11 @@ function App() {
 
     setInterval(() => {
         if (increasing) {
-          ambientLight.intensity = Math.max(ambientLight.intensity - 0.5, 0); // Diminue jusqu'à 0
+          ambientLight.intensity = Math.max(ambientLight.intensity - 0.3, 0); // Diminue jusqu'à 0
             if (ambientLight.intensity === 0) increasing = false; // Inverse la direction
             
         } else {
-          ambientLight.intensity = Math.min(ambientLight.intensity + 0.5, 4); // Augmente jusqu'à 4
+          ambientLight.intensity = Math.min(ambientLight.intensity + 1, 4); // Augmente jusqu'à 4
             if (ambientLight.intensity === 4) increasing = true; // Inverse la direction
             
         }
