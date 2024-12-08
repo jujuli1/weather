@@ -60,7 +60,7 @@ body{
   
   width: 65%;
   height: 100vh;
-  margin-top: -69vh;
+  margin-top: -71vh;
   margin-left: 31%;
 }
 
@@ -104,5 +104,6 @@ body{
 
 canvas{
   margin-left: -66vh;
+  height: 987px;
 }
 
