@@ -13,6 +13,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState({});
   const [error, setError] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const searchPressed = () => {
     fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
@@ -23,6 +24,7 @@ function App() {
         } else {
           setError("");
           setWeather(result);
+          setIsModalOpen(true);
         }
       })
       .catch(() => {
@@ -62,7 +64,7 @@ function App() {
 
     // Variables pour le mouvement circulaire
     let angle = 0; // Angle initial en radians
-    const radius = 2; // Rayon du cercle
+    const radius = 3; // Rayon du cercle
     const speed = 0.001; // Vitesse de rotation (radians par frame)
 
     // Animation
@@ -126,18 +128,29 @@ function App() {
         </button>
       </header>
 
-      <div className="resultats">
-        {typeof weather.main !== "undefined" ? (
-          <div>
-            <p>{weather.name}</p>
-            <p>{weather.main.temp}°C</p>
-            <p>{weather.weather[0].main}</p>
-            <p>({weather.weather[0].description})</p>
+       {/* Modale */}
+       {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <button
+              className="modal-close"
+              onClick={() => setIsModalOpen(false)} // Fermer la modale
+            >
+              X
+            </button>
+            {typeof weather.main !== 'undefined' ? (
+              <div>
+                <p>{weather.name}</p>
+                <p>{weather.main.temp}°C</p>
+                <p>{weather.weather[0].main}</p>
+                <p>({weather.weather[0].description})</p>
+              </div>
+            ) : (
+              <p>{error}</p>
+            )}
           </div>
-        ) : (
-          <p>{error}</p>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Conteneur pour le rendu Three.js */}
       <div id="three-container" ></div>
