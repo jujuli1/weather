@@ -1,38 +1,174 @@
 
 
 body{
-  background-image: url('../public/img/ciel.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-color:  #181717;
 }
 
-.meteok{
-  margin-left: 3%;
-  padding-top: 1%;
-  font-size: 65px;
-  color: rgb(230, 230, 15);
+.h3{
+  color: azure;
+}
+
+/*texte modale*/
+.texte {
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: rgb(252, 252, 247);
+  
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  opacity: 0; /* Masquer initialement */
+  animation: typing 2s steps(18) forwards, cursor 0.5s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+    opacity: 1; /* Rendre visible au début de l'animation */
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.texte:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.texte:nth-child(2) {
+  animation-delay: 2.5s;
+}
+
+.texte:nth-child(3) {
+  animation-delay: 5s;
+}
+
+.texte:nth-child(4) {
+  animation-delay: 7.5s;
+}
+
+.texte:nth-child(5) {
+  animation-delay: 10s;
+}
+
+.texte:nth-child(6) {
+  animation-delay: 12.5s;
+}
+
+.texte:nth-child(7) {
+  animation-delay: 15s;
+}
+
+ol{
+  list-style-type: none;
+}
+/* effets matrix*/
+.meteok {
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: #008F11;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 2;
+  opacity: 0; /* Masquer initialement */
+  animation: typing2 3s steps(18) infinite, cursor2 0.5s step-end infinite alternate;
+}
+.containeur{
+z-index: 2;
+margin-left: 5%;
+}
+.containeur2{
+  z-index: 2;
+  margin-left: 30%;
+  margin-top: 10%;
+
+}
+.containeur3{
+  z-index: 2;
+  margin-left: 80%;
+  margin-top: 3%;
 
 }
 
+@keyframes cursor2 {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing2 {
+  0% {
+    width: 0;
+    opacity: 0.3; /* Rendre visible au début de l'animation */
+  }
+  100% {
+    width: 100%;
+    
+  }
+}
+
+
+
+
+.meteok:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.meteok:nth-child(2) {
+  animation-delay: 2.5s;
+}
+
+.meteok:nth-child(3) {
+  animation-delay: 12.5s;
+}
+
+.meteok:nth-child(4) {
+  animation-delay: 8.5s;
+}
+
+.meteok:nth-child(5) {
+  animation-delay: 5s;
+}
+
+.meteok:nth-child(6) {
+  animation-delay: 10.5s;
+}
+
+.meteok:nth-child(7) {
+  animation-delay: 4s;
+}
 .resultats{
   font-size: 3vh;
   margin-left: 88vh;
 }
+
+/*input recherche */
 .recherche{
   height: 35px;
   width: 299px;
   font-size: 32px;
+  border: 2px solid #008F11;
   border-radius: 7px;
+  color: whitesmoke;
   background-color: transparent; 
   z-index: 1;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   
 
   
 }
 
 .btnR{
-  width: 100px;
-  height: 73px;
+  width: 79px;
+  height: 77px;
   border-radius: 40px;
   margin-top: -5px;
   background-color: rgb(253, 253, 249);
@@ -40,14 +176,13 @@ body{
   border: 1px solid #d3dcf0;
   font-family: Jazz LET, fantasy  sans-serif;
   z-index: 1;
+  cursor: pointer;
 }
 
 
 
 .App-header {
-  margin-bottom: -100px;
-  min-height: 50vh;
-  
+  margin-top: -30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,6 +199,20 @@ body{
   margin-left: 31%;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: brightness(50%);
+  }
+  50% {
+    filter: brightness(120%);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(100%);
+  }
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -75,35 +224,48 @@ body{
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  animation: fadeIn 1s ease-in-out;
+  
+  
 }
 
 .modal-content {
-  background-color: white;
   padding: 20px;
-  border-radius: 8px;
-  width: 300px;
+  width: 50%;
   text-align: center;
   position: relative;
+  height: 100%;
+  
 }
 
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgb(0, 38, 255);
-  color: white;
+  top: 29px;
+  right: 36px;
+  background: rgb(13, 21, 21);
+  color: #d53f3f;
   border: none;
   border-radius: 50%;
   padding: 5px 10px;
   cursor: pointer;
+  font-size: 25px;
+  font-family: initial;
 }
 
 .modal-close:hover {
   background: darkred;
 }
 
+
+
 canvas{
   margin-left: -66vh;
   height: 987px;
 }
+
+.containeur{
+  display: inline-block;
+}
+
+
 
