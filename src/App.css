@@ -102,5 +102,7 @@ body{
   background: darkred;
 }
 
-
+canvas{
+  margin-left: -66vh;
+}
 
