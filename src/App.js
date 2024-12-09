@@ -37,7 +37,9 @@ function App() {
       .then((res) => res.json())
       .then((result) => {
         if (result.cod !== 200) {
-          setError("Ville non trouvée");
+          setError("ERROR : CITY NOT FOUND ");
+          
+          
         } else {
           setError("");
           setWeather(result);
@@ -91,6 +93,17 @@ function App() {
         <button className="btnR" onClick={searchPressed}>
           Search
         </button>
+        <div className='info'>
+          <div className='glitch-bloc'>
+          {error && <p className="invisible-text">{error}</p>}
+          {error && <p className="glitcheAdmin">{error}</p>}
+          {error && <p className="glitcheAdmin">{error}</p>}
+          {error && <p className="glitcheAdmin">{error}</p>}
+          </div>
+
+
+        </div>
+        
       </header>
 
        {/* Modale */}
@@ -126,11 +139,13 @@ function App() {
             
            </div>
             ) : (
+              
               <p>{error}</p>
             )}
             
             
           </div>
+          
         </div>
       )}
 
