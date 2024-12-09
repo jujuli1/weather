@@ -171,12 +171,12 @@ margin-left: 5%;
   height: 77px;
   border-radius: 40px;
   margin-top: -5px;
-  background-color: rgb(253, 253, 249);
-  border: none;
-  border: 1px solid #d3dcf0;
-  font-family: Jazz LET, fantasy  sans-serif;
+  background-color: black;
+  font-family: Jazz LET, fantasy sans-serif;
+  color: #008F11;
   z-index: 1;
   cursor: pointer;
+  border: 2px solid #008F11;
 }
 
 
@@ -191,13 +191,7 @@ margin-left: 5%;
   gap: 2vh;
 }
 
-#three-container{
-  
-  width: 65%;
-  height: 100vh;
-  margin-top: -71vh;
-  margin-left: 31%;
-}
+
 
 @keyframes fadeIn {
   0% {
@@ -260,10 +254,6 @@ margin-left: 5%;
 
 
 
-canvas{
-  margin-left: -66vh;
-  height: 987px;
-}
 
 .containeur{
   display: inline-block;
